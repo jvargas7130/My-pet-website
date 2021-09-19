@@ -121,7 +121,7 @@ button {
 }
 
 
-@media (max-width: 320px){
+@media (max-width: 390px){
     .main-panel {
         display: flex;
         flex-direction: column;
