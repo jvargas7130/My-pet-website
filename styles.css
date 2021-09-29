@@ -1,7 +1,10 @@
+
+
 *{
     font-family:karla;
     font-size: 16px;
 }
+
 /* Grid box beginning */
 body {
     
@@ -11,6 +14,19 @@ body {
     align-items: center; 
     min-height: 100vh; 
 }
+
+
+ul{
+    list-style: none;
+    padding-left: 0;
+    color:hsla(204, 0%, 99.5%,0.55);
+}
+
+li {
+    margin: .3em 0;
+   
+}
+
 .main-panel {
     border-radius: 15px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -29,44 +45,30 @@ body {
     grid-area: header;
     background-color:rgb(255, 255, 255);
 }
-.bottomleft-panel {
-    border-radius: 0 0 0 13px;
-    padding: 2em 3em;
-    background-color: hsl(179, 65%, 46%); 
-}
-.bottomright-panel{
-    border-radius: 0 0 13px 0;
-    padding: 2em 3em;
-    background-color: rgb(44, 204, 201);
-}
-/* Gridbox ending */
 
-/* titles */
-.top-panel .title {
+.top-panel-title {
     color: rgb(44, 204, 201);
     font-size: 26px;
     font-weight: bold;
 }
 
-.title {
-    color:rgb(255, 255, 255);
+.top-panel-guarantee {
+    color:rgb(160, 223, 67);
     font-size: 20px;
-    font-weight: bold;
-    margin-top: 12px;
 }
 
-
-h3 {
-    color: rgb(255, 255, 255);
- 
+.top-panel-info li {
+    font-size: 17px;
+    color: hsl(204, 14.69%, 73.93%);
 }
 
-ul{
-    list-style: none;
-    padding-left: 0;
-    color:hsla(204, 0%, 99.5%,0.55);
+.bottomleft-panel {
+    border-radius: 0 0 0 13px;
+    padding: 2em 3em;
+    background-color: hsl(179, 65%, 46%); 
 }
-.pricing{
+
+.bottomleft-panel-pricing{
     font-size: 37px;
     font-weight: 600;
     color: rgb(255, 255, 255);
@@ -74,21 +76,8 @@ ul{
 
 }
 
-li {
-    margin: .3em 0;
-   
-}
-.join li {
-    font-size: 17px;
-    color: hsl(204, 14.69%, 73.93%);
-}
-
-.guarantee {
-    color:rgb(160, 223, 67);
-    font-size: 20px;
-}
 /* Per month */
-.month{
+.bottomleft-panel-month{
     font-size: 16px;
     position: relative;
     left: 88px;
@@ -96,12 +85,12 @@ li {
     color: hsla(204, 0%, 99.5%,0.55);
 }
 
-.full-access {
+.bottomleft-panel-full-access {
     color: rgb(255, 255, 255, 0.79);
     margin-top: -56px;
 }
 
-/*sign in button */
+/*Buttom-left button */
 button {
     background-color: rgb(160, 223, 67);
     color:white;
@@ -114,16 +103,84 @@ button {
     cursor: pointer;   
 }
 
+.bottomright-panel{
+    border-radius: 0 0 13px 0;
+    padding: 2em 3em;
+    background-color: rgb(44, 204, 201);
+}
+
+/* Gridbox ending */
+.bottomleft-panel-title, .bottomright-panel-title {
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
 /* footer comment*/
 .attribution {
     position:fixed;
     bottom:0;
 }
 
-
-@media (max-width: 480px){
+@media (max-width: 420px){
     .main-panel {
         display: flex;
+        flex-basis: 100%;
         flex-direction: column;
+        max-width: 295px;
+        margin-top: 69px;
+        margin-bottom: 100px;
+       
     }
-}
+
+    .top-panel{
+        border-radius: 3px 3px 0 0;
+        padding: 1em;
+        width: 307px;
+        padding-left: 26px;
+        padding-top: 10px;
+        
+    }
+
+
+    .top-panel-title {
+        color: rgb(44, 204, 201);
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .top-panel-guarantee {
+        color:rgb(160, 223, 67);
+        font-size: 16px;
+    }
+
+    .top-panel-info li {
+        font-size: 14px;
+        color: hsl(204, 14.69%, 73.93%);
+        line-height: 1.8;
+    }
+
+
+    .bottomleft-panel {
+        border-radius: 0 0 0 0px;
+        padding: 1em;
+        width: 307px;
+    }
+
+    .bottomright-panel{
+        border-radius: 0 0 3px 3px;
+        padding: 1em;
+        width: 307px;
+    }
+    
+
+
+
+    /* footer comment*/
+    .attribution {
+        position: absolute;
+        top: 860px;
+        right: 300px;
+    }
+} 
