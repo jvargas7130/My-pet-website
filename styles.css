@@ -136,44 +136,57 @@ button {
 
     .top-panel{
         border-radius: 3px 3px 0 0;
-        padding: 1em;
-        width: 307px;
-        padding-left: 26px;
-        padding-top: 10px;
+        padding: 1.3em;
+        min-width: 281px;
+        padding-top: 2px;
         
     }
 
 
     .top-panel-title {
-        color: rgb(44, 204, 201);
         font-size: 21px;
         font-weight: bold;
     }
 
     .top-panel-guarantee {
-        color:rgb(160, 223, 67);
         font-size: 16px;
     }
 
     .top-panel-info li {
         font-size: 14px;
-        color: hsl(204, 14.69%, 73.93%);
         line-height: 1.8;
+        display:inline;
     }
-
+  
+    .top-panel-info li:last-child {
+        display:inline;
+    }
 
     .bottomleft-panel {
         border-radius: 0 0 0 0px;
-        padding: 1em;
-        width: 307px;
+        padding: 1.3em;
+        min-width: 281px;
+      
     }
 
     .bottomright-panel{
         border-radius: 0 0 3px 3px;
-        padding: 1em;
-        width: 307px;
+        padding: 1.3em;
+        min-width: 281px;
+      
+    }
+
+    button {
+      
+        padding: 1em 7em;
+      
     }
     
+    .bottomleft-panel-month{
+       
+        left: 81px;
+      
+    }
 
 
 
