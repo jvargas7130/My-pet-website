@@ -1,54 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" href="styles.css"> 
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-  <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">  
-  <link rel="stylesheet" href="styles.css">
-  <title>Frontend Mentor | Single Price Grid Component</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/7c5337680b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script>"https"</script>
+    <title>Finn the cute Beagle</title>
 </head>
+
 <body>
-        <!-- Main Container-->
-    <div class="main-panel">
-        <!-- Top container that sits ontop  -->
-       <div class="top-panel">
-            <p class="top-panel-title">Join our community</p>
-            <p class="top-panel-guarantee">30-day, hassle-free money back guarantee</p>
-            <ul class="top-panel-info">
-              <li > Gain access to our full library of tutorials along with expert code reviews. </li>
-              <li >Perfect for any developers who are serious about honing their skills.</li>
-            </ul>
+   
+    <!--Header-->
+    <div id="header-container">
+        <nav>
+            <span><a href="#home">Home</a></span>
+            <span><a href="#about">About</a></span>
+            <span><a href="#gallery">Gallery</a></span>
+            <span><a href="#peemail">PeeMailNews</a></span>
+            <span><a href="#contact">Contact</a></span>
+        </nav>
+    </div>
+
+    <!--Main title page-->
+    <div id="home">
+        <img src="./images/finn-logo.png" class="title">
+        <img src="./images/aroo.png" class="aroo">
+        <img src="./images/Finn.png" class="finn">
+    </div>
+
+    <!---Paws transition-->
+    <div class="paws-right">
+        <img src="./images/paw-right.png" alt="">
+    </div>
+
+    <!--about intro-->
+
+    <h2 id="about">About</h2>
+    <div class="about">
+        <img src="./images/about.png" alt="">
+        <p>Oh Hi, Woof Woof! My name is Finn, I am 2 and 1/2 years old, and I am a lovable pup. I was born in
+            Bakersfield, CA, but I eventually got adopted by Eileen and Jesse, who are my awesome parents that I love
+            dear, and moved to Pico Rivera, CA.
+            Woof woof, Did I mentioned I am cute!!!!
+        </p>
+    </div>
+    <!--Tall grass-->
+    <div class="about-2">
+        <p>Oh Hi again, Woof Woof! I LoooooooVE Tall Grass!! Woof!
+        </p>
+        <img src="./images/tall-grass.png" alt="">
+    </div>
+    <!--Education-->
+    <div class="about-3">
+        <img src="./images/education.png" alt="">
+        <div class="p">
+            <p>I am </p>
+            <p>well </p>
+            <p>Educated</p>
+        </div>
+        <img src="./images/education2.png" alt="">
+
+    </div>
+    <!--sister-->
+    <div id="about-4">
+        <p> Did I mention my sister Rosie lives next door?
+        </p>
+        <img src="./images/sister.png" alt="">
+        <img src="./images/sister2.png" alt="">
+        <img src="./images/sister3.png" alt="">
+    </div>
+    <!--Friends-->
+    <p>I can't forget about my friends!</p>
+    <div class="about-5">
+        <div class="images-container">
+            <img src="./images/friends.png" alt="">
+            <img src="./images/friends2.png" alt="">
+            <img src="./images/friends3.png" alt="">
+            <img src="./images/friends4.png" alt="">
+        </div>
+    </div>
+    <!--Family-->
+    <p id="about-6">....and of course my Pack whos gots my back</p>
+
+    <div class="pic-loop">
+        <img id="image1" src="">
+    </div>
+    <!--left transition-->
+    <div class="paws-left">
+        <img src="./images/paw-left.png" alt="">
+    </div>
+
+    <!--Gallery-->
+    <h2 id="gallery">Gallery</h2>
+    <div class="button">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="" class="image">
+            <img src="" class="image">
+            <img src="" class="image">
+            <img src="" class="image">
+            <img src="" class="image">
+            <img src="" class="image">
+            <img src="" class="image">
+            <img src="" class="image">
+            <img src="" class="image">
+            <img src="" class="image">
+            <img src="" class="image">
+        </div>
+    </div>
+
+    <!--Pop up preview box-->
+    <div class="preview-box">
+        <div class="details">
+            <span class="title">
+                image <p class="curren-imgt">3</p>
+                of <p class="total-img">6</p>
+            </span>
+            <span class="icon"> &#xd7</span>
+        </div>
+        <div class="img-box">
+            <div class="slide prev">
+                <span class="arrow">&#x3c</span>
+
+            </div>
+            <div class="slide next">
+                <span class="arrow">&#x3e</span>
+
+            </div>
+            <img src="" alt="">
+        </div>
+    </div>
+
+    <!---Paws transition-->
+    <div class="paws-right">
+        <img src="./images/paw-right.png" alt="">
+    </div>
+    
+    <!--Pee Mail-->
+     <!--Gallery-->
+    <h2 id="peemail">Pee Mail News</h2>
+
+       <!--left transition-->
+    <div class="paws-left">
+        <img src="./images/paw-left.png" alt="">
+    </div>
+
+        <!---Contact section-->
+    <h2 id="contact">Contact us</h2>
+    <div class="contact">
+     
+        <div class = "contact-container">
+            <Header>Send us a message</Header>
+             
+            <form action="#">
+                <div class="dbl-field">
+                    <div class="field">
+                        <input type="text" placeholder="Enter your name">
+                        <i class="fa-solid fa-user"></i>
+                     
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Enter your email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="message">
+                    <textarea placeholder="Write your message"></textarea>
+                    <i class="material-icons">message</i>
+                </div>
+               
+                <div class="button-area">
+                    <button type="submit">Send message</button>
+                    <span>Sending your message...</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+       <!---Contact section-->
+       <div class="footer">
+            <h3> &#169; Finnous & Furb inc 2022</h3>  
+            <h3>Designed by Jesse Vargas</h3>
        </div>
-        <!-- Bottom left container -->
-       <div class="bottomleft-panel">
-            <p class="bottomleft-panel-title">Monthly Subscription</p>
-           <p class="bottomleft-panel-pricing">&dollar;29 </p>
-            <p class="bottomleft-panel-month">per month</p>
-           <p class="bottomleft-panel-full-access">Full access for less than &dollar;1 a day</p>
-          <button> Sign Up</button>
-       </div>
-       <!--Bottem right container -->
-       <div class="bottomright-panel">
-            <p class="bottomright-panel-title">Why Us</p>
-            <ul>
-              <li>Tutorials by industry experts</li>
-              <li>Peer &amp; expert code review</li>
-              <li>Coding exercises</li>
-              <li>Access to our GitHub repos</li>
-              <li>Community forum</li>
-              <li> Flashcard decks</li>
-              <li>New videos every week</li>
-            </ul>     
-       </div>
-      </div> 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Jesse Vargas</a>.
-    </p>
-  </footer>
+   
+    <script type="text/javascript" src="app.js"></script>
+
 </body>
+
 </html>
