@@ -170,7 +170,7 @@ form.onsubmit = (e) => {//The onsubmit attribute fires when a form is submitted.
   statusTxt.style.display = "block";
   console.log("onsubmit: ");
   let xhr = new XMLHttpRequest();//creating new xml object
-  xhr.open("GET", "message.php", true);
+  xhr.open("POST", "message.php", true);
   xhr.onload = ()=>{
     console.log("onload: ");
     if(xhr.readyState == 4 && xhr.status == 200){//if ajax reponse status is 200 & ready status is 4 means there is no any error
@@ -178,8 +178,8 @@ form.onsubmit = (e) => {//The onsubmit attribute fires when a form is submitted.
       console.log("response: "+response);
     }
   }
-  //let formData = new formData(); //creating new formData obj. this obj is used to send form data
-  xhr.send(); //sending form data
+  let formData = new FormData(form); //creating new formData obj. this obj is used to send form data
+  xhr.send(formData); //sending form data
 }
 
 galleryPush();
