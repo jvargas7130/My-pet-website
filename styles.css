@@ -408,6 +408,7 @@ a {
 
 }
 
+
 .preview-box .details {
     display: flex;
     align-items: center;
@@ -496,6 +497,7 @@ a {
 }
 
 
+/*Title*/
 #contact {
     font-family: finn;
     font-size: 100px;
@@ -548,6 +550,7 @@ form .dbl-field{
 
 
 
+/* Input boxes for contact us*/
 form .field input,
 form .message textarea{
     height: 100%;
@@ -558,6 +561,12 @@ form .message textarea{
     border-bottom: 1px solid #bfbfbf;
     font-size: 16px;
 
+}
+
+/*border hover for contact us input boxes */
+form .field input:focus,
+form .message textarea:focus{
+    border: 2px solid #0D6EFD;
 }
 
 form .message textarea{
@@ -586,6 +595,24 @@ form .message textarea{
     top: 1%;
 }
 
+.button-area button{
+    font-size: 18px;
+    border: none;
+    padding: 13px 25px;
+    background: #1080b1;
+    padding: 13px 25px;
+ 
+
+}
+
+.button-area span{
+    color: #1080b1;
+    margin-left: 30px;
+    display: none;
+}
+
+
+/*border hover for contact us input boxes */
 .footer {
     background-color: RGB(141, 103, 55);
     padding: 10px;

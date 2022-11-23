@@ -16,6 +16,9 @@ let galleryIMG = document.querySelectorAll(".image");
 
 let button = document.querySelectorAll(".button button");
 
+const form = document.querySelector("form");
+statusTxt = form.querySelector(".button-area span");
+
 /*  img.src = "./images/family1.png";*/
 
 let loop = [
@@ -160,6 +163,26 @@ window.onload = () => {
   }
 };
 
+//Contacts
+
+form.onsubmit = (e) => {//The onsubmit attribute fires when a form is submitted.
+  e.preventDefault(); //preventing form from submitting
+  statusTxt.style.display = "block";
+  console.log("onsubmit: ");
+  let xhr = new XMLHttpRequest();//creating new xml object
+  xhr.open("GET", "message.php", true);
+  xhr.onload = ()=>{
+    console.log("onload: ");
+    if(xhr.readyState == 4 && xhr.status == 200){//if ajax reponse status is 200 & ready status is 4 means there is no any error
+      let response = xhr.response;//storing ajax response in a response variable
+      console.log("response: "+response);
+    }
+  }
+  //let formData = new formData(); //creating new formData obj. this obj is used to send form data
+  xhr.send(); //sending form data
+}
+
 galleryPush();
 
 loopimg();
+ 
