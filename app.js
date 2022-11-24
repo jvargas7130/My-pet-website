@@ -168,8 +168,7 @@ window.onload = () => {
 form.onsubmit = (e) => {//The onsubmit attribute fires when a form is submitted.
   e.preventDefault(); //preventing form from submitting
   statusTxt.style.display = "block";
-  console.log("onsubmit: ");
-  let xhr = new XMLHttpRequest();//creating new xml object
+  let xhr = new XMLHttpsRequest();//creating new xml object
   xhr.open("POST", "message.php", true);
   xhr.onload = ()=>{
     console.log("onload: ");
@@ -178,11 +177,12 @@ form.onsubmit = (e) => {//The onsubmit attribute fires when a form is submitted.
       console.log("response: "+response);
     }
   }
-  let formData = new FormData(form); //creating new formData obj. this obj is used to send form data
-  xhr.send(formData); //sending form data
+ let formData = new FormData(form); //creating new formData obj. this obj is used to send form data
+  console.log("form: "+formData.src);
+  xhr.send(); //sending form data
 }
 
 galleryPush();
 
 loopimg();
- 
+  
