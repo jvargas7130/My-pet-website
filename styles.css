@@ -6,6 +6,7 @@
 @font-face {
     font-family: paw-patrol;
     src: url(AachenBTBoldfont.ttf);
+ 
 
 }
 
@@ -98,8 +99,6 @@ a {
     position: relative;
     right: -186px;
     bottom: -330px;
-
-
 }
 
 
@@ -157,6 +156,7 @@ a {
     padding-left: 40px;
     padding-right: 40px;
     background-color: rgb(245, 245, 245);
+   
 
 }
 
@@ -265,7 +265,7 @@ a {
 
 
 
-/*friends*/
+/*friends Side scroller library*/
 .about-5 {
     padding: 1rem;
     height: 500px;
@@ -274,15 +274,24 @@ a {
     background-color: rgb(245, 245, 245);
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-
-
+    position: relative;
+  
 }
+
+
+
+   
+
+
+
 
 .about-5 .images-container {
     display: flex;
     overflow-x: auto;
     gap: 40px;
-    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    white-space: nowrap;
+   scroll-snap-type: x mandatory; 
 
 }
 
@@ -290,6 +299,7 @@ a {
 .about-5 img {
     height: 500px;
     scroll-snap-align: start;
+    
 }
 
 .about-5 h2 {
@@ -300,7 +310,43 @@ a {
     text-align: left;
     display: flex;
     align-items: center;
+   
 }
+
+.images-container .scroll {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 13px;
+    color: white;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    z-index: 7;
+
+
+}
+
+.images-container .scroll.prevImg {
+    left: 0;
+
+}
+
+.images-container .scroll.nextImg {
+    right: 0;
+
+}
+
+.scroll.prevImg i, 
+.scroll.nextImg i {
+    font-size: 80px;
+    opacity: 0.7;
+
+}
+
+
 
 /*Pictureloop*/
 .pic-loop {
@@ -315,6 +361,7 @@ a {
 .pic-loop img {
     height: 500px;
     margin: 0;
+  
 
 }
 
@@ -356,8 +403,11 @@ a {
 
 /*images */
 .gallery img {
+
+
+  
     width: 100% !important;
-    height: auto !important;
+    height: auto !important; 
     display: block;
     /*transform: all 0.3s ease; */
 }
@@ -468,25 +518,51 @@ a {
 
 .img-box .slide.prev {
     left: 0;
-
-
 }
 
 .img-box .slide.next {
     right: 0;
+}
 
+.slide.prev i, 
+.slide.next i {
+    font-size: 80px;
+    opacity: 0.2;
 
 }
 
-.details .icon {
+.slide.prev i:hover, 
+.slide.next i:hover {
+   
+    opacity: 10;
+
+}
+
+
+.details .close {
     color: white;
-    font-size: 27px;
+    font-size: 40px;
     cursor: pointer;
+    opacity: 0.2;
 }
 
+.details .close:hover {
+    color: red;
+    font-size: 40px;
+    cursor: pointer;
+    opacity: 10;
+}
 
+/*peemail and Comment*/
 
-
+.HolidayFInn{
+    margin: 0;
+    color: white;
+    font-size: 60px;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: red;
+ }
+ 
 #peemail {
     font-family: finn;
     font-size: 100px;
@@ -495,6 +571,84 @@ a {
     padding-left: 40px;
 
 }
+.comment{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.comment-container .comment-title{
+    font-size: 80px;
+
+}
+
+.comment-message textarea {
+    font-size: 20px;
+}
+
+.comment-name input {
+    font-size: 20px;
+}
+
+.comment-container {
+  
+   width: 1000px;/* lets comments expand*/
+   padding: 100px;
+   margin: 0;
+ 
+}
+.comment-message textarea{
+    height: 60px;
+    width: 995px;
+ }
+
+.name-button {
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.latest-container{
+    height: 600px;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+   display: flex;
+}
+
+
+.latest-container .peemail-images img{
+    
+    height: 700px;
+  
+}
+
+.peemail-images .snoopy{
+  
+    width: 900px;
+}
+
+
+.comment-button button{
+    font-size: 18px;
+    border: none;
+    padding: 13px 25px;
+    background:  #BD77C4;
+    padding: 13px 25px;
+}
+
+#create-comment { /*helps expand text in comment message area*/
+    height: 100%;
+ }
+
+
+
+/*Contact Us*/
 
 
 /*Title*/
@@ -550,8 +704,8 @@ form .dbl-field{
 
 
 
-/* Input boxes for contact us*/
-form .field input,
+
+form .field input,/* Input boxes for contact us*/
 form .message textarea{
     height: 100%;
     width: 80%;
@@ -563,8 +717,8 @@ form .message textarea{
 
 }
 
-/*border hover for contact us input boxes */
-form .field input:focus,
+
+form .field input:focus,/*border hover for contact us input boxes */
 form .message textarea:focus{
     border: 2px solid #0D6EFD;
 }
@@ -595,25 +749,17 @@ form .message textarea{
     top: 1%;
 }
 
-.button-area button{
+.button-contact{
     font-size: 18px;
     border: none;
     padding: 13px 25px;
     background: #1080b1;
     padding: 13px 25px;
- 
-
 }
 
-.button-area span{
-    color: #1080b1;
-    margin-left: 30px;
-    display: none;
-}
+/*footer*/
 
-
-/*border hover for contact us input boxes */
-.footer {
+.footer {/*border hover for contact us input boxes */
     background-color: RGB(141, 103, 55);
     padding: 10px;
   

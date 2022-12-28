@@ -6,18 +6,17 @@ const gallery = document.querySelectorAll(".gallery .image");
 
 let previewBox = document.querySelector(".preview-box");
 let previewImg = previewBox.querySelector("img");
-let closeIcon = previewBox.querySelector(".icon");
-let currentImg = previewBox.querySelector(".curren-imgt");
+let closeIcon = previewBox.querySelector(".close");
+let currentImg = previewBox.querySelector(".curren-img");
 let totalImg = previewBox.querySelector(".total-img");
 
 let gallerContainer = document.querySelector(".gallery-container");
 let bodyStopScroll = document.querySelector("body");
 let galleryIMG = document.querySelectorAll(".image");
 
-let button = document.querySelectorAll(".button button");
+let button = document.querySelectorAll(".button-gallery button");
 
-const form = document.querySelector("form");
-statusTxt = form.querySelector(".button-area span");
+
 
 /*  img.src = "./images/family1.png";*/
 
@@ -27,12 +26,18 @@ let loop = [
   "./images/family4.png",
 ];
 
-//access image folders and add them to html imgage gallery div images
-
 let galleryLoop = [];
 
-loop.push("./images/aroo.png");
+//read directory files
 
+
+
+
+
+
+
+
+//access image folders and add them to html imgage gallery div images
 function galleryPush() {
 
 
@@ -40,6 +45,7 @@ function galleryPush() {
     
     let alert = galleryLoop.push("./images/gallery/gallery" + i + ".png");
     console.log("Alert" + alert);
+    console.log("gallery img:" + galleryLoop[i]);
 
     // ./images/gallery/gallery0.png
   }
@@ -50,10 +56,11 @@ function galleryAdd(index) {
   for (let j = 0; j < galleryIMG.length; j++) {
     let number = index + j;
 
-    console.log("i: " + j);
-    console.log("index:" + index);
-    console.log("gallery loop:" + galleryLoop[j + index]);
-    console.log("gallery img:" + galleryIMG[j].src);
+    //console.log("i: " + j);
+    //console.log("index:" + index);
+   // console.log("gallery loop:" + galleryLoop[j + index]);
+   // console.log("gallery img:" + galleryloop[j].src);
+   
     galleryIMG[j].src = "./images/gallery/gallery" + number + ".png";
     console.log("gallery img after:" + galleryIMG[j].src);
   }
@@ -92,6 +99,9 @@ window.onload = () => {
 
       galleryAdd(index); //load pictures on click
     };
+
+    document.getElementById("create-comment").innerHTML = localStorage.getItem("c1");  
+ 
   }
 
   for (let i = 0; i < gallery.length; i++) {
@@ -163,24 +173,91 @@ window.onload = () => {
   }
 };
 
-//Contacts
+//Comments
+function comments(){
 
-form.onsubmit = (e) => {//The onsubmit attribute fires when a form is submitted.
-  e.preventDefault(); //preventing form from submitting
-  statusTxt.style.display = "block";
-  let xhr = new XMLHttpsRequest();//creating new xml object
-  xhr.open("POST", "message.php", true);
-  xhr.onload = ()=>{
-    console.log("onload: ");
-    if(xhr.readyState == 4 && xhr.status == 200){//if ajax reponse status is 200 & ready status is 4 means there is no any error
-      let response = xhr.response;//storing ajax response in a response variable
-      console.log("response: "+response);
-    }
-  }
- let formData = new FormData(form); //creating new formData obj. this obj is used to send form data
-  console.log("form: "+formData.src);
-  xhr.send(); //sending form data
+  var node= [{ //node comment object to contain name and message input
+    name: document.getElementById("comment-name").value,
+    message: document.getElementById("comment").value,
+  }];
+  const chartBox = document.getElementById("create-comment");//get id of div to be template
+ 
+ 
+
+  const divider = document.createElement("div");//create div with custom configurations
+  //divider.style.width = "100%";
+  //divider.style.height = "100%";//help for dynamic expansion 
+  divider.style.border = "1px solid grey";
+  divider.style.marginTop = "15px";
+  divider.style.marginBottom = "15px";
+  divider.style.textAlign= "left";//align text to the left
+
+
+  
+  
+
+  node.forEach((node, index) => {//for loop to access node values
+    let itemP = document.createElement('h5');//created two of each to display node values in seperate lines
+    let itemP2 = document.createElement('h5');
+    let itemPText = document.createTextNode(`Name: ${node.name}`);//access node values
+    let itemPText2 = document.createTextNode(`Message: ${node.message}`);
+    itemP.style.marginBottom = "10px";
+    itemP2.style.margin = "0";
+   
+  
+    
+    itemP.appendChild(itemPText);//Appned input to created h4
+    itemP2.appendChild(itemPText2);
+  
+   
+    let item1 = [{
+      name: chartBox.appendChild(divider).appendChild(itemP),//append h4 and input info to a created div
+     message:  chartBox.appendChild(divider).appendChild(itemP2),
+
+    }]
+    
+   
+    localStorage.setItem("c1",JSON.stringify(item1));
+   
+ 
+   
+  });
+
+
+
 }
+
+
+
+
+
+
+//Contacts
+function sendMail(){
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+
+  };
+  const serviceID = "service_yof9mqm";
+const templateID = "template_6wb7jct";
+
+emailjs.send(serviceID, templateID,params)
+.then(
+  res => {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+    console.log("res " +res);
+    alert("your message sent successfully")
+  })
+  .catch((err) => console.log(err));
+}
+
+
+
+
 
 galleryPush();
 

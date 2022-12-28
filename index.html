@@ -8,8 +8,18 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/7c5337680b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>"https"</script>
+  
+  
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init("i4z3NbmRpvf_qjqjX");
+   })();
+</script>
+    
     <title>Finn the cute Beagle</title>
 </head>
 
@@ -24,7 +34,7 @@
             <span><a href="#peemail">PeeMailNews</a></span>
             <span><a href="#contact">Contact</a></span>
         </nav>
-    </div>
+    </div>s
 
     <!--Main title page-->
     <div id="home">
@@ -82,6 +92,13 @@
             <img src="./images/friends2.png" alt="">
             <img src="./images/friends3.png" alt="">
             <img src="./images/friends4.png" alt="">
+                <div class="scroll prevImg">
+                    <i class="fa-sharp fa-solid fa-angle-left"></i> <!--Side scrow prev arrow-->
+                </div>
+                <div class="scroll nextImg">
+                    <i class="fa-sharp fa-solid fa-angle-right"></i> <!--Side scrow next arrow-->
+                </div>
+                <img src="" alt="">
         </div>
     </div>
     <!--Family-->
@@ -97,26 +114,27 @@
 
     <!--Gallery-->
     <h2 id="gallery">Gallery</h2>
-    <div class="button">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
+    <div class="button-gallery">
+        
+        <button class="paw-button"><i class="fa-solid fa-paw"> 1</i></button>
+        <button class="paw-button"><i class="fa-solid fa-paw">2</i></button>
+        <button class="paw-button"><i class="fa-solid fa-paw">3</i></button>
+        <button class="paw-button"><i class="fa-solid fa-paw">4</i></button>
     </div>
 
     <div class="gallery-container">
         <div class="gallery">
-            <img src="" class="image">
-            <img src="" class="image">
-            <img src="" class="image">
-            <img src="" class="image">
-            <img src="" class="image">
-            <img src="" class="image">
-            <img src="" class="image">
-            <img src="" class="image">
-            <img src="" class="image">
-            <img src="" class="image">
-            <img src="" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
+            <img src="" loading="lazy" class="image">
         </div>
     </div>
 
@@ -124,18 +142,20 @@
     <div class="preview-box">
         <div class="details">
             <span class="title">
-                image <p class="curren-imgt">3</p>
+                image <p class="curren-img">3</p>
                 of <p class="total-img">6</p>
             </span>
-            <span class="icon"> &#xd7</span>
+            <span class="close"> <i class="fa-solid fa-rectangle-xmark"></i></span>
         </div>
         <div class="img-box">
             <div class="slide prev">
-                <span class="arrow">&#x3c</span>
+                <i class="fa-sharp fa-solid fa-angle-left"></i>
+                <!--Side scrow prev arrow-->
 
             </div>
             <div class="slide next">
-                <span class="arrow">&#x3e</span>
+                <i class="fa-sharp fa-solid fa-angle-right"></i>
+                <!--Side scrow next arrow-->
 
             </div>
             <img src="" alt="">
@@ -147,9 +167,38 @@
         <img src="./images/paw-right.png" alt="">
     </div>
     
-    <!--Pee Mail-->
-     <!--Gallery-->
-    <h2 id="peemail">Pee Mail News</h2>
+    <!--Pee Mail and Comment-->
+    <h2 id="peemail">Pee Mail</h2>
+   
+    <div class="peemail">
+        
+            <p class="HolidayFInn">Holiday Finn</p>
+            <div class="latest-container">
+                <img src="./images/holiday/christmas.png" alt="">
+                <img class="snoopy" src="./images/holiday/snoopy.jpeg" alt="">
+            </div>  
+        </div>
+        <div class="comment">
+           
+            <div class="comment-container">
+                <h2 class="comment-title">Please leave a comment</h2>
+                <div class="comment-message">
+                    <textarea name="comment" id="comment" placeholder="Comment"></textarea>
+                </div>
+            <div class="name-button">
+                <div class="comment-name">
+                    <input type="text" name="comment-name" id="comment-name" placeholder="Enter your name"> 
+                </div>
+
+                <div class="comment-button">
+                    <button type="button" onclick="comments()" id ="button-contact">Post Comment</button>
+                </div> 
+            </div>
+              
+                <div id="create-comment"></div>
+            </div>
+        </div>
+    </div>
 
        <!--left transition-->
     <div class="paws-left">
@@ -166,29 +215,25 @@
             <form action="#"> <!---Form-Container for input fields -->
                 <div class="dbl-field">
                     <div class="field">
-                        <input type="text" name="name" placeholder="Enter your name">
+                        <input type="text" name="name" id="name" placeholder="Enter your name">
                         <i class="fa-solid fa-user"></i>
                      
                     </div>
                     <div class="field">
-                        <input type="text" name="email" placeholder="Enter your email">
+                        <input type="text" name="email" id="email" placeholder="Enter your email">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                 </div>
                 <div class="message">
-                    <textarea name="message" placeholder="Write your message"></textarea>
+                    <textarea name="message" id="message" placeholder="Write your message"></textarea>
                     <i class="material-icons">message</i>
                 </div>
-               
-                <div class="button-area">
-                    <button type="submit">Send message</button>
-                    <span>Sending your message...</span>
-                </div>
+                    <button type="button" class="button-contact"onclick="sendMail()">Send message</button>
             </form>
         </div>
     </div>
 
-       <!---Contact section-->
+       <!---Footer section-->
        <div class="footer">
             <h3> &#169; Finneous & Furb inc 2022</h3>  
             <h3>Designed by Jesse Vargas</h3>
