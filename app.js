@@ -100,7 +100,7 @@ window.onload = () => {
       galleryAdd(index); //load pictures on click
     };
 
-    document.getElementById("create-comment").innerHTML = localStorage.getItem("c1");  
+   // document.getElementById("create-comment").innerHTML = localStorage.getItem("c1");  
  
   }
 
@@ -173,6 +173,8 @@ window.onload = () => {
   }
 };
 
+/* 
+
 //Comments
 function comments(){
 
@@ -228,7 +230,7 @@ function comments(){
 }
 
 
-
+*/
 
 
 

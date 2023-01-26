@@ -10,11 +10,16 @@
 
 }
 
+*{
+    font-size: 50px;
+}
+
+
 
 
 h1 {
     font-family: paw-patrol;
-    font-size: 50px;
+   
     text-align: left;
 }
 
@@ -27,7 +32,7 @@ h3 {
 
 p {
     font-family: finn;
-    font-size: 50px;
+  
 
 }
 
@@ -72,9 +77,10 @@ a {
 /** Home page logo pic**/
 
 #home {
-    height: 930px;
-    position: relative;
-    overflow: auto;
+   height: 920px;
+   display: inline-block;
+   font-size: 0px; /*Removed whitespace from two divs*/
+   
     /*Split colors in container*/
     background: linear-gradient(to top,
             white 0%,
@@ -86,32 +92,43 @@ a {
             #E05214 50%,
             #E05214 100%);
 
+            /*
+   background-image: url(./images/finn_banner.png);  
+   background-repeat: no-repeat;   
+   background-size: 109%;
+   */
 }
 
-#home .title {
-    height: 250px;
-    position: relative;
-    right: 93px;
-}
-
-.finn {
-    height: 600px;
-    position: relative;
-    right: -186px;
-    bottom: -330px;
+#home .finn-banner {
+    height: auto;  
+    width: 100%;
 }
 
 
-.aroo {
+.home-paws-right {
+    height: 100px;
+    /*blue Beagle color*/
+    background-color: #1080b1;
+    text-align: right;
+    width: 100%;
+}
+
+#home-paws-right{
     height: 300px;
-    position: absolute;
-    background-size: 0;
-    top: 150px;
-
 }
+
+
+#home-paws-right img{
+    height: 100%;
+    width: 35%;
+}
+
+
+
 
 /** Transition right**/
 .paws-right {
+   
     height: 100px;
     /*blue Beagle color*/
     background-color: #1080b1;
@@ -119,13 +136,15 @@ a {
     width: 100%;
     display: inline-block;
 }
-
-.paws-right img {
+.paws-right img{
     height: 300px;
 }
 
+
+
 /** Transition left**/
 .paws-left {
+  
     height: 100px;
     background-color: #1080b1;
     text-align: left;
@@ -156,12 +175,11 @@ a {
     padding-left: 40px;
     padding-right: 40px;
     background-color: rgb(245, 245, 245);
-   
-
 }
 
 .about img {
-    height: 600px;
+    height: auto;
+    width: 30%;
     margin-right: 40px;
 }
 
@@ -195,6 +213,7 @@ a {
 
 .about-2 img {
     height: 600px;
+    max-width: 100%;
     margin-right: 50px;
     margin: 0;
 
@@ -376,6 +395,7 @@ a {
     text-align: right;
     margin: 0;
     padding-right: 40px;
+  
 
 }
 
@@ -387,6 +407,8 @@ a {
     column-gap: 0px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     max-width: 1200px;
+    margin-bottom: 100px;
+
     /*Shrank gallery frame*/
 }
 
@@ -555,12 +577,14 @@ a {
 
 /*peemail and Comment*/
 
+/*peemail*/
 .HolidayFInn{
     margin: 0;
     color: white;
     font-size: 60px;
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: red;
+   
  }
  
 #peemail {
@@ -569,8 +593,37 @@ a {
     text-align: left;
     margin: 0;
     padding-left: 40px;
+    margin-bottom: 100px;
 
 }
+
+.latest-container .peemail-images img{
+    
+    height: 700px;
+  
+}
+
+.peemail-images .snoopy{
+  
+    width: 900px;
+}
+
+
+.latest-container{
+    height: 600px;
+    margin-top: 0;
+   padding: 0;
+    border: 4px solid red;
+
+   display: flex;
+   margin-bottom: 100px;
+}
+
+
+
+
+
+/*commnets*/
 .comment{
     height: 100%;
     display: flex;
@@ -611,27 +664,6 @@ a {
 }
 
 
-.latest-container{
-    height: 600px;
-    margin-top: 0;
-    padding-top: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-
-   display: flex;
-}
-
-
-.latest-container .peemail-images img{
-    
-    height: 700px;
-  
-}
-
-.peemail-images .snoopy{
-  
-    width: 900px;
-}
 
 
 .comment-button button{
@@ -771,3 +803,89 @@ form .message textarea{
 }
 
 
+
+@media only screen and (max-width: 600px){
+    *{
+        font-size: 20px;
+    }
+    #home {
+        height: 900px;
+        display: flex;
+        flex-direction: column;
+    
+     
+        /*Split colors in container*/
+       
+    
+    }
+
+
+    #header-container {
+
+
+        height: 80px;
+        margin: 0;
+    }
+    
+    #home .finn-banner {
+       
+    content: url(./images/mobile\ banner.png);
+    padding-top: 6px;
+    height: 600px;
+    width: 100%;
+    }
+
+    .home-paws-right {
+        height: 50px;
+        /*blue Beagle color*/
+        background-color: #1080b1;
+        text-align: right;
+        width: 100%;
+    }
+    
+    #home-paws-right{
+        height: 100px;
+    }
+    
+    
+    #home-paws-right img{
+        height: 100%;
+        width: 35%;
+    }
+
+    /*About container*/
+.about {
+    height: 300px;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: rgb(245, 245, 245);
+}
+
+.about img {
+    height: auto;
+    width: 30%;
+    margin-right: 40px;
+}
+    
+
+    /** Transition right**/
+    .paws-right {
+    
+      
+        display: inline;
+    }
+
+    .paws-right img {
+        height: 100%;
+    }
+
+    /*title of about*/
+
+
+
+
+
+    
+
+}
