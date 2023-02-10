@@ -179,7 +179,7 @@ a {
 
 .about img {
     height: auto;
-    width: 30%;
+   
     margin-right: 40px;
 }
 
@@ -809,9 +809,10 @@ form .message textarea{
         font-size: 20px;
     }
     #home {
-        height: 900px;
+        
         display: flex;
         flex-direction: column;
+        font-size: 0px;
     
      
         /*Split colors in container*/
@@ -821,8 +822,6 @@ form .message textarea{
 
 
     #header-container {
-
-
         height: 80px;
         margin: 0;
     }
@@ -831,7 +830,7 @@ form .message textarea{
        
     content: url(./images/mobile\ banner.png);
     padding-top: 6px;
-    height: 600px;
+    height: 800px;
     width: 100%;
     }
 
@@ -853,26 +852,107 @@ form .message textarea{
         width: 35%;
     }
 
+    /**About**/
+
     /*About container*/
-.about {
-    height: 300px;
+    .about {
+       display: flex;
+       flex-basis: 100%;
+       flex-direction: column;
+    
+    }
+
+    .about img {
+       
+         height: 400px;
+
+    }
+
+    .about h2 {
+      
+    }
+
+    .about p {
+        text-align: center;
+       
+        align-items: center;
+    }
+
+
+    /* Second About container*/
+    /*Tall grass*/
+    .about-2 {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .about-2 img {
+        height: 400px;
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .about-2 p {
+     
+    
+    }
+
+    /*Education*/
+.about-3 {
     display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: rgb(245, 245, 245);
+    height: auto;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    background: linear-gradient(to top,
+    RGB(141, 103, 55) 0%,
+    RGB(141, 103, 55) 50%,
+    rgb(245, 245, 245) 50%,
+    rgb(245, 245, 245) 100%);
+    
 }
 
-.about img {
+.about-3 img {
     height: auto;
-    width: 30%;
-    margin-right: 40px;
+
+    margin: 0;
+}
+
+.about-3 h2 {
+    display: block;
+}
+
+.about-3 p {
+    color: white;
+    align-items: center;
+    width: 200px;
+    margin: auto;
+}
+
+/*Sister*/
+
+#about-4 {
+    height: auto;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#about-4 img {
+    height: auto;
+    margin: 0;
 }
     
 
     /** Transition right**/
     .paws-right {
-    
-      
         display: inline;
     }
 
