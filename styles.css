@@ -77,8 +77,9 @@ a {
 /** Home page logo pic**/
 
 #home {
-   height: 920px;
-   display: inline-block;
+   height: auto;
+   
+   
    font-size: 0px; /*Removed whitespace from two divs*/
    
     /*Split colors in container*/
@@ -98,30 +99,13 @@ a {
    background-size: 109%;
    */
 }
-
 #home .finn-banner {
-    height: auto;  
-    width: 100%;
+    height: 900px;  
+    width: 1700px;
+    margin: 0;
 }
 
 
-.home-paws-right {
-    height: 100px;
-    /*blue Beagle color*/
-    background-color: #1080b1;
-    text-align: right;
-    width: 100%;
-}
-
-#home-paws-right{
-    height: 300px;
-}
-
-
-#home-paws-right img{
-    height: 100%;
-    width: 35%;
-}
 
 
 
@@ -802,7 +786,22 @@ form .message textarea{
     margin: 0;
 }
 
+@media only screen and (max-width: 1600px){
+    #home .finn-banner {
+        height: 800px;  
+        width: 1000px;
+        margin: 0;
+    }
+    *{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 900px){
 
+    *{
+        font-size: 19px;
+    }
+}
 
 @media only screen and (max-width: 600px){
     *{
@@ -834,23 +833,7 @@ form .message textarea{
     width: 100%;
     }
 
-    .home-paws-right {
-        height: 50px;
-        /*blue Beagle color*/
-        background-color: #1080b1;
-        text-align: right;
-        width: 100%;
-    }
-    
-    #home-paws-right{
-        height: 100px;
-    }
-    
-    
-    #home-paws-right img{
-        height: 100%;
-        width: 35%;
-    }
+   
 
     /**About**/
 
@@ -950,17 +933,6 @@ form .message textarea{
     margin: 0;
 }
     
-
-    /** Transition right**/
-    .paws-right {
-        display: inline;
-    }
-
-    .paws-right img {
-        height: 100%;
-    }
-
-    /*title of about*/
 
 
 
