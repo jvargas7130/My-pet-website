@@ -253,11 +253,13 @@ a {
 /*Sister*/
 
 #about-4 {
-    height: 600px;
+
+   display: inline-block;
     padding-top: 60px;
     padding-left: 40px;
     padding-right: 40px;
     background-color: white;
+ 
 
 }
 
@@ -270,6 +272,7 @@ a {
 
 /*friends Side scroller library*/
 .about-5 {
+    display: inline-block;
     padding: 1rem;
     height: 500px;
     max-width: 900px;
@@ -278,7 +281,6 @@ a {
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     position: relative;
-  
 }
 
 
@@ -328,8 +330,6 @@ a {
     line-height: 50px;
     text-align: center;
     z-index: 7;
-
-
 }
 
 .images-container .scroll.prevImg {
@@ -587,20 +587,19 @@ a {
   
 }
 
-.peemail-images .snoopy{
+.latest-container .snoopy{
   
-    width: 900px;
+    width: 100px;
 }
 
 
 .latest-container{
     height: 600px;
     margin-top: 0;
-   padding: 0;
+    padding: 0;
     border: 4px solid red;
-
-   display: flex;
-   margin-bottom: 100px;
+    display: flex;
+    margin-bottom: 100px;
 }
 
 
@@ -832,7 +831,32 @@ form .message textarea{
     height: 800px;
     width: 100%;
     }
+    
+    /** Transition right**/
+    .paws-right {
+    
+        height: 50px;
+        /*blue Beagle color*/
+       
+    }
+    .paws-right img{
+        height: 150px;
+    }
 
+
+
+    /** Transition left**/
+    .paws-left {
+    
+        height: 50px;
+        
+       
+    }
+
+    .paws-left img {
+        height: 150px;
+
+    }
    
 
     /**About**/
@@ -881,63 +905,126 @@ form .message textarea{
     
     }
 
-    /*Education*/
-.about-3 {
-    display: flex;
-    height: auto;
-    flex-direction: column;
-    padding-top: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-    background: linear-gradient(to top,
-    RGB(141, 103, 55) 0%,
-    RGB(141, 103, 55) 50%,
-    rgb(245, 245, 245) 50%,
-    rgb(245, 245, 245) 100%);
+        /*Education*/
+    .about-3 {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        background: linear-gradient(to top,
+        RGB(141, 103, 55) 0%,
+        RGB(141, 103, 55) 50%,
+        rgb(245, 245, 245) 50%,
+        rgb(245, 245, 245) 100%);
+        
+    }
+
+    .about-3 img {
+        height: auto;
+
+        margin: 0;
+    }
+
+    .about-3 h2 {
+        display: block;
+    }
+
+    .about-3 p {
+        color: white;
+        align-items: center;
+        width: 200px;
+        margin: auto;
+    }
+
+    /*Sister*/
+
+    #about-4 {
+        height: auto;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #about-4 img {
+        height: auto;
+        margin: 0;
+    }
+        
+    .about-5 {
+        display: inline-block;
+        padding: 1rem;
+        height: auto;
+        max-width: 300px;
+        margin: auto;
+        background-color: rgb(245, 245, 245);
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        position: relative; 
+    }
+
+    .about-5 img {
+        height: 200px;
+        scroll-snap-align: start;
+        
+    }
+
+    /*Pictureloop*/
+    .pic-loop {
+        height: auto;
+        margin: auto;
+        padding-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pic-loop img {
+        height: 300px;
+        margin: 0;
+    }
+
+    .HolidayFInn{
+        margin: 0;
+        color: white;
+        font-size: 60px;
+        -webkit-text-stroke-width: 4px;
+        -webkit-text-stroke-color: red;
+
+    }
     
-}
+    #peemail {
+        font-family: finn;
+        font-size: 100px;
+        text-align: center;
+        margin: 0;
+        padding-left: 40px;
+        margin-bottom: 100px;
+    }
 
-.about-3 img {
-    height: auto;
+    .latest-container{
+        height: 554px;
+        margin-top: 0;
+        padding: 0;
+        border: 4px solid red;
+        display: flex;
+        margin-bottom: 100px;
+    }
 
-    margin: 0;
-}
+    .latest-container .snoopy{
+        visibility: hidden;
+        display: none;
+    }
 
-.about-3 h2 {
-    display: block;
-}
-
-.about-3 p {
-    color: white;
-    align-items: center;
-    width: 200px;
-    margin: auto;
-}
-
-/*Sister*/
-
-#about-4 {
-    height: auto;
-    padding-top: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-
-}
-
-#about-4 img {
-    height: auto;
-    margin: 0;
-}
-    
-
-
-
-
-
-    
+    .latest-container img{
+        text-align: center; 
+        height: 554px; 
+    }
 
 }
