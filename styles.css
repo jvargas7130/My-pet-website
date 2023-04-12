@@ -23,8 +23,12 @@ h1 {
     text-align: left;
 }
 
+h2 {
+    font-family: finn;
+    font-size: 100px;
+}
 
-h2,
+
 h3 {
     font-family: finn;
  
@@ -145,8 +149,7 @@ a {
 
 /*title of about*/
 #about {
-    font-family: finn;
-    font-size: 100px;
+    
     text-align: left;
     margin: 0;
     padding-left: 40px;
@@ -254,7 +257,7 @@ a {
 
 #about-4 {
 
-   display: inline-block;
+    display: inline-block;
     padding-top: 60px;
     padding-left: 40px;
     padding-right: 40px;
@@ -374,8 +377,7 @@ a {
 
 
 #gallery {
-    font-family: finn;
-    font-size: 100px;
+    
     text-align: right;
     margin: 0;
     padding-right: 40px;
@@ -572,8 +574,7 @@ a {
  }
  
 #peemail {
-    font-family: finn;
-    font-size: 100px;
+  
     text-align: left;
     margin: 0;
     padding-left: 40px;
@@ -606,7 +607,7 @@ a {
 
 
 
-/*commnets*/
+/*comments*/
 .comment{
     height: 100%;
     display: flex;
@@ -668,8 +669,7 @@ a {
 
 /*Title*/
 #contact {
-    font-family: finn;
-    font-size: 100px;
+   
     text-align: right;
     margin: 0;
     padding-right: 40px;
@@ -806,6 +806,12 @@ form .message textarea{
     *{
         font-size: 20px;
     }
+
+    h2 {
+        font-size: 75px;
+        text-align: center !important; 
+    }
+
     #home {
         
         display: flex;
@@ -998,23 +1004,14 @@ form .message textarea{
         -webkit-text-stroke-color: red;
 
     }
-    
+
+    /*peemail and Comment*/
     #peemail {
-        font-family: finn;
-        font-size: 100px;
         text-align: center;
-        margin: 0;
-        padding-left: 40px;
-        margin-bottom: 100px;
     }
 
     .latest-container{
         height: 554px;
-        margin-top: 0;
-        padding: 0;
-        border: 4px solid red;
-        display: flex;
-        margin-bottom: 100px;
     }
 
     .latest-container .snoopy{
@@ -1026,5 +1023,45 @@ form .message textarea{
         text-align: center; 
         height: 554px; 
     }
+
+    /*Contact Us*/
+
+    .contact {
+        height: 800px;
+        
+    }
+
+    form .dbl-field{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        column-gap: 40px;
+        margin-bottom: 25px;
+    }
+
+    .contact-container {
+        width: 340px;
+        background: #fff;
+        border-radius: 7px;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        padding: auto;
+    }
+    
+    form .message textarea{
+        height: 200px;
+        width: 200px;
+    }
+
+    
+    .dbl-field .field {
+        padding-bottom: 40px;
+        margin-left: -131px;
+    }
+
+    form .field input {
+       
+        width: 151%;
+    }
+
 
 }
