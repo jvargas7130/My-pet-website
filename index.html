@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/7c5337680b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
   
 
@@ -27,13 +29,35 @@
    
     <!--Header-->
     <div id="header-container">
-        <nav>
+        <nav >
             <span><a href="#home">Home</a></span>
             <span><a href="#about">About</a></span>
             <span><a href="#gallery">Gallery</a></span>
             <span><a href="#peemail">PeeMailNews</a></span>
             <span><a href="#contact">Contact</a></span>
         </nav>
+    </div>
+
+    <!-- Top Navigation Menu for mobile -->
+    <div class="topnav-container">
+
+
+        <div class="topnav">
+            <a href="#home" class="active">Home Menu</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks" style="display: block;">
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#peemail">PeeMailNews</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </div>
 
     <!--Main title page-->
@@ -94,13 +118,15 @@
             <img src="./images/friends2.png" alt="">
             <img src="./images/friends3.png" alt="">
             <img src="./images/friends4.png" alt="">
-                <div class="scroll prevImg">
-                    <i class="fa-sharp fa-solid fa-angle-left"></i> <!--Side scrow prev arrow-->
+<!--              
+              <div class="scroll prevImg">
+                    <i class="fa-sharp fa-solid fa-angle-left"></i> 
                 </div>
                 <div class="scroll nextImg">
-                    <i class="fa-sharp fa-solid fa-angle-right"></i> <!--Side scrow next arrow-->
+                    <i class="fa-sharp fa-solid fa-angle-right"></i> 
                 </div>
-                <img src="" alt="">
+          
+                <img src="" alt=""> -->
         </div>
     </div>
     <!--Family-->
@@ -176,7 +202,7 @@
         
             <p class="HolidayFInn">Holiday Finn</p>
             <div class="latest-container">
-                <img src="./images/holiday/christmas.png" alt="">
+                <img class="finn" src="./images/holiday/christmas.png" alt="">
                 <img class="snoopy" src="./images/holiday/snoopy.jpeg" alt="">
             </div>  
         </div>

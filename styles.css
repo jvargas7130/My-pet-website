@@ -335,7 +335,7 @@ a {
     z-index: 7;
 }
 
-.images-container .scroll.prevImg {
+/* .images-container .scroll.prevImg {
     left: 0;
 
 }
@@ -343,15 +343,14 @@ a {
 .images-container .scroll.nextImg {
     right: 0;
 
-}
+} 
 
 .scroll.prevImg i, 
 .scroll.nextImg i {
     font-size: 80px;
     opacity: 0.7;
 
-}
-
+} */
 
 
 /*Pictureloop*/
@@ -582,16 +581,8 @@ a {
 
 }
 
-.latest-container .peemail-images img{
-    
-    height: 700px;
-  
-}
 
-.latest-container .snoopy{
-  
-    width: 100px;
-}
+
 
 
 .latest-container{
@@ -603,6 +594,23 @@ a {
     margin-bottom: 100px;
 }
 
+
+.latest-container{
+  
+    height: 554px;
+    overflow: hidden;
+}
+
+.latest-container .snoopy{
+    width: 100%;
+   
+}
+
+.latest-container .finn{
+   
+    text-align: center; 
+   /* height: 554px; */
+}
 
 
 
@@ -826,10 +834,66 @@ form .message textarea{
 
 
     #header-container {
-        height: 80px;
-        margin: 0;
+       display: none;
+    }
+
+        /* Mobile menu begining */
+
+    /* Style the navigation menu */
+    .topnav-container{
+        position: fixed;
+        display: block;
+        right: 0;
+        left: 0;
+       z-index: 2;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color:#BD77C4;
+    
+        position: relative;
+    
     }
     
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: block;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background:  #1080b1;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+   
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: RGB(141, 103, 55);
+    color: white;
+    z-index: 2;
+  }
+/* Mobile menu  end */
+
+
     #home .finn-banner {
        
     content: url(./images/mobile\ banner.png);
@@ -962,12 +1026,13 @@ form .message textarea{
         height: auto;
         margin: 0;
     }
-        
+
+    /*friends Side scroller library*/ 
     .about-5 {
         display: inline-block;
         padding: 1rem;
-        height: auto;
-        max-width: 300px;
+        height: 350px;
+        max-width: 465px;
         margin: auto;
         background-color: rgb(245, 245, 245);
         border-radius: 8px;
@@ -976,7 +1041,7 @@ form .message textarea{
     }
 
     .about-5 img {
-        height: 200px;
+        height: 340px;
         scroll-snap-align: start;
         
     }
@@ -1011,17 +1076,20 @@ form .message textarea{
     }
 
     .latest-container{
+    
         height: 554px;
     }
 
     .latest-container .snoopy{
+       
         visibility: hidden;
         display: none;
     }
 
-    .latest-container img{
+    .latest-container .finn{
+       width: 100%;
         text-align: center; 
-        height: 554px; 
+       /* height: 554px; */
     }
 
     /*Contact Us*/
