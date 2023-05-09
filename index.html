@@ -54,7 +54,7 @@
 
         
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
@@ -241,10 +241,11 @@
     <h2 id="contact">Contact us</h2>
     <div class="contact">
      
-        <div class = "contact-container">
+        <div class = "contact-container" >
+            
             <Header>Send us a message</Header>
-             
-            <form action="#"> <!---Form-Container for input fields -->
+            <div id="error_message"></div>
+            <form action="#" > <!---Form-Container for input fields -->
                 <div class="dbl-field">
                     <div class="field">
                         <input type="text" name="name" id="name" placeholder="Enter your name">
@@ -260,7 +261,7 @@
                     <textarea name="message" id="message" placeholder="Write your message"></textarea>
                     <i class="material-icons">message</i>
                 </div>
-                    <button type="button" class="button-contact"onclick="sendMail()">Send message</button>
+                    <button type="button" class="button-contact"onclick="return validation()">Send message</button>   <!---Validates form clicking -->
             </form>
         </div>
     </div>

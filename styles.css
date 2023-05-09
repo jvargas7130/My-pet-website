@@ -793,6 +793,17 @@ form .message textarea{
     margin: 0;
 }
 
+
+/*Creates contact error div below title of contact us*/
+
+.contact-container #error_message{
+    margin-bottom: 20px;
+    padding: 0;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
 @media only screen and (max-width: 1600px){
     #home .finn-banner {
         height: 800px;  

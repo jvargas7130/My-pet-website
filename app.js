@@ -16,8 +16,6 @@ let galleryIMG = document.querySelectorAll(".image");
 
 let button = document.querySelectorAll(".button-gallery button");
 
-
-
 /*  img.src = "./images/family1.png";*/
 
 let loop = [
@@ -28,25 +26,13 @@ let loop = [
 
 let galleryLoop = [];
 
-//read directory files
-
-
-
-
-
-
-
-
 //access image folders and add them to html imgage gallery div images
 function galleryPush() {
 
-
   for (let i = 0; i < 40; i++) {
-    
     let alert = galleryLoop.push("./images/gallery/gallery" + i + ".png");
     console.log("Alert" + alert);
     console.log("gallery img:" + galleryLoop[i]);
-
     // ./images/gallery/gallery0.png
   }
 }
@@ -55,12 +41,10 @@ function galleryPush() {
 function galleryAdd(index) {
   for (let j = 0; j < galleryIMG.length; j++) {
     let number = index + j;
-
     //console.log("i: " + j);
     //console.log("index:" + index);
-   // console.log("gallery loop:" + galleryLoop[j + index]);
-   // console.log("gallery img:" + galleryloop[j].src);
-   
+    // console.log("gallery loop:" + galleryLoop[j + index]);
+    // console.log("gallery img:" + galleryloop[j].src);
     galleryIMG[j].src = "./images/gallery/gallery" + number + ".png";
     console.log("gallery img after:" + galleryIMG[j].src);
   }
@@ -99,9 +83,7 @@ window.onload = () => {
 
       galleryAdd(index); //load pictures on click
     };
-
-   // document.getElementById("create-comment").innerHTML = localStorage.getItem("c1");  
- 
+    // document.getElementById("create-comment").innerHTML = localStorage.getItem("c1");  
   }
 
   for (let i = 0; i < gallery.length; i++) {
@@ -116,7 +98,7 @@ window.onload = () => {
       console.log("index2" + i);
 
       function preview() {
-        //Point preview window to sected image
+        //Point preview window to selected image
         currentImg.textContent = newIndex + 1; //display number of current img
 
         let clickedUrl = gallery[newIndex].src; //get gallery img url and store it to clickedUrl
@@ -159,7 +141,7 @@ window.onload = () => {
 
       preview(); //call preview
       previewBox.classList.add("show");
-      gallerContainer.classList.add("freeze"); //prevent img selection  response and blur background
+      gallerContainer.classList.add("freeze"); //prevent img selection response and blur background
       bodyStopScroll.classList.add("stop-scroll");
 
       closeIcon.onclick = () => {
@@ -225,17 +207,14 @@ function comments(){
    
   });
 
-
-
 }
-
 
 */
 
-
-
 //Contacts
-function sendMail(){
+function sendMail() {
+  console.log("sent email");
+
   var params = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
@@ -243,36 +222,66 @@ function sendMail(){
 
   };
   const serviceID = "service_yof9mqm";
-const templateID = "template_6wb7jct";
+  const templateID = "template_6wb7jct";
 
-emailjs.send(serviceID, templateID,params)
-.then(
-  res => {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-    console.log("res " +res);
-    alert("your message sent successfully")
-  })
-  .catch((err) => console.log(err));
+  emailjs.send(serviceID, templateID, params)
+    .then(
+      res => {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        console.log("res " + res);
+        alert("your message sent successfully")
+      })
+    .catch((err) => console.log(err));
 }
 
-
-function myFunction() {
- 
+//Used in mobile version. The menu begins in closed "display-none" status. The "display-block" status is to display menu.
+function mobileMenu() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
-  } else if(x.style.display === "none"){
+  }
+  if (x.style.display === "none") {
     x.style.display = "block";
-  }else{  
+  } else {
     x.style.display = "none";
   }
-}
+};
 
+/*Checks to validate */
+function validation() {
+  console.log("validation1");
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var error_message = document.getElementById("error_message");
+  var text;
+  error_message.style.padding = "10px";
+  if (name.length < 3) {
+    console.log("validation2");
+    text = "please enter valid name";
+    error_message.innerHTML = text;
+    return false; //breaks out and returns false
+  }
+  if (email.indexOf("@") == -1 || email.length < 6 || email.indexOf(".") == -1) {
+    console.log("validation3");
+    text = "please enter valid email";
+    error_message.innerHTML = text;
+    return false; //breaks out and returns false
+  }
+  if (message.length <= 10) {
+    text = "Please enter more than 10 characters";
+    error_message.innerHTML = text;
+    return false;//breaks out and returns false
+  }
+  console.log("Send mail");
+  sendMail();//sends message to email
+  error_message.remove();//renoves div with error message 
+};
 
 galleryPush();
 
 loopimg();
-  
-myFunction();
+
+mobileMenu();
