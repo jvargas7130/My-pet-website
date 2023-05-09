@@ -241,15 +241,19 @@ function mobileMenu() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
+    return;
   }
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+    return;
+  }else {
     x.style.display = "none";
-  }
+    return;
+  } 
+
 };
 
-/*Checks to validate */
+/*Checks to validate name, email and message on contact us form  */
 function validation() {
   console.log("validation1");
   var name = document.getElementById("name").value;
